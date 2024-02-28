@@ -1,0 +1,340 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#272424"
+    tools:context=".FormActivity">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gdlLeftForm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="40dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gdlRightForm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="40dp" />
+
+    <TextView
+        android:id="@+id/txvTitleForm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:fontFamily="@font/comfortaa"
+        android:text="@string/strTitleForm"
+        android:textColor="#E3D9D9"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toStartOf="@+id/gdlRightForm"
+        app:layout_constraintStart_toStartOf="@+id/gdlLeftForm"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txvSymptomsForm"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="8dp"
+        android:fontFamily="@font/comfortaa"
+        android:text="@string/strSymptomsForm"
+        android:textColor="#E3D9D9"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toStartOf="@+id/gdlRightForm"
+        app:layout_constraintStart_toStartOf="@+id/gdlLeftForm"
+        app:layout_constraintTop_toBottomOf="@+id/txvTitleForm" />
+
+    <LinearLayout
+        android:id="@+id/llySymptomsContainerForm"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toStartOf="@+id/gdlRightForm"
+        app:layout_constraintStart_toStartOf="@+id/gdlLeftForm"
+        app:layout_constraintTop_toBottomOf="@+id/txvSymptomsForm">
+
+        <CheckBox
+            android:id="@+id/cbxAppetiteSmellingSymptomForm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/comfortaa"
+            android:text="@string/strAppetiteAndSmellSymptomForm"
+            android:textColor="#E3D9D9" />
+
+        <CheckBox
+            android:id="@+id/cbxCoughSymptomForm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/comfortaa"
+            android:text="@string/strCoughSymptomForm"
+            android:textColor="#E3D9D9" />
+
+        <CheckBox
+            android:id="@+id/cbxSoreThroatSymptomForm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/comfortaa"
+            android:text="@string/strSoreThroatSymptomForm"
+            android:textColor="#E3D9D9" />
+
+        <CheckBox
+            android:id="@+id/cbxNasalCongestionSymptomForm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/comfortaa"
+            android:text="@string/strNasalCongestionSymptomForm"
+            android:textColor="#E3D9D9" />
+
+        <CheckBox
+            android:id="@+id/cbxFeverSymptomForm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/comfortaa"
+            android:text="@string/strFeverSymptomForm"
+            android:textColor="#E3D9D9" />
+
+        <CheckBox
+            android:id="@+id/cbxNoneSymptomForm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/comfortaa"
+            android:text="@string/strNoneGlobal"
+            android:textColor="#E3D9D9" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/txvFeverForm"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:fontFamily="@font/comfortaa"
+        android:text="@string/strFeverForm"
+        android:textColor="#E3D9D9"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toStartOf="@+id/gdlRightForm"
+        app:layout_constraintStart_toStartOf="@+id/gdlLeftForm"
+        app:layout_constraintTop_toBottomOf="@+id/llySymptomsContainerForm" />
+
+    <RadioGroup
+        android:id="@+id/rgpFeverContainerForm"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        app:layout_constraintEnd_toStartOf="@+id/gdlRightForm"
+        app:layout_constraintStart_toStartOf="@+id/gdlLeftForm"
+        app:layout_constraintTop_toBottomOf="@+id/txvFeverForm">
+
+        <RadioButton
+            android:id="@+id/rbnYesFeverForm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/comfortaa"
+            android:text="@string/strYesGlobal"
+            android:textColor="#E3D9D9" />
+
+        <RadioButton
+            android:id="@+id/rbnNoFeverForm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/comfortaa"
+            android:text="@string/strNoGlobal"
+            android:textColor="#E3D9D9" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/txvHouseForm"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:fontFamily="@font/comfortaa"
+        android:text="@string/strHouseForm"
+        android:textColor="#E3D9D9"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toStartOf="@+id/gdlRightForm"
+        app:layout_constraintStart_toStartOf="@+id/gdlLeftForm"
+        app:layout_constraintTop_toBottomOf="@+id/rgpFeverContainerForm" />
+
+    <RadioGroup
+        android:id="@+id/rgpHouseContainerForm"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        app:layout_constraintEnd_toStartOf="@+id/gdlRightForm"
+        app:layout_constraintStart_toStartOf="@+id/gdlLeftForm"
+        app:layout_constraintTop_toBottomOf="@+id/txvHouseForm">
+
+        <RadioButton
+            android:id="@+id/rbnYesHouseForm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/comfortaa"
+            android:text="@string/strYesGlobal"
+            android:textColor="#E3D9D9" />
+
+        <RadioButton
+            android:id="@+id/rbnNoHouseForm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/comfortaa"
+            android:text="@string/strNoGlobal"
+            android:textColor="#E3D9D9" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/txvSeniorAdultForm"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:fontFamily="@font/comfortaa"
+        android:text="@string/strSeniorAdultForm"
+        android:textColor="#E3D9D9"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toStartOf="@+id/gdlRightForm"
+        app:layout_constraintStart_toStartOf="@+id/gdlLeftForm"
+        app:layout_constraintTop_toBottomOf="@+id/rgpHouseContainerForm" />
+
+    <RadioGroup
+        android:id="@+id/rgpSeniorAdultContainerForm"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        app:layout_constraintEnd_toStartOf="@+id/gdlRightForm"
+        app:layout_constraintStart_toStartOf="@+id/gdlLeftForm"
+        app:layout_constraintTop_toBottomOf="@+id/txvSeniorAdultForm">
+
+        <RadioButton
+            android:id="@+id/rbnYesSeniorAdultForm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/comfortaa"
+            android:text="@string/strYesGlobal"
+            android:textColor="#E3D9D9" />
+
+        <RadioButton
+            android:id="@+id/rbnNoSeniorAdultForm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/comfortaa"
+            android:text="@string/strNoGlobal"
+            android:textColor="#E3D9D9" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/txvServicesForm"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:fontFamily="@font/comfortaa"
+        android:text="@string/strServicesForm"
+        android:textColor="#E3D9D9"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toStartOf="@+id/gdlRightForm"
+        app:layout_constraintStart_toStartOf="@+id/gdlLeftForm"
+        app:layout_constraintTop_toBottomOf="@+id/rgpSeniorAdultContainerForm" />
+
+    <LinearLayout
+        android:id="@+id/llyServicesContainerForm"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toStartOf="@+id/gdlRightForm"
+        app:layout_constraintStart_toStartOf="@+id/gdlLeftForm"
+        app:layout_constraintTop_toBottomOf="@+id/txvServicesForm">
+
+        <CheckBox
+            android:id="@+id/cbxElectricityServiceForm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/comfortaa"
+            android:text="@string/strElectricityServiceForm"
+            android:textColor="#E3D9D9" />
+
+        <CheckBox
+            android:id="@+id/cbxWaterServiceForm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/comfortaa"
+            android:text="@string/strWaterServiceForm"
+            android:textColor="#E3D9D9" />
+
+        <CheckBox
+            android:id="@+id/cbxInternetServiceForm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/comfortaa"
+            android:text="@string/strInternetServiceForm"
+            android:textColor="#E3D9D9" />
+
+        <CheckBox
+            android:id="@+id/cbxTvServiceForm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/comfortaa"
+            android:text="@string/strTvServiceForm"
+            android:textColor="#E3D9D9" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnResolveForm"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="32dp"
+        android:backgroundTint="#2C2F30"
+        android:fontFamily="@font/comfortaa"
+        android:text="@string/strResolveForm"
+        android:textColorHighlight="#E3D9D9"
+        app:layout_constraintEnd_toStartOf="@+id/gdlRightForm"
+        app:layout_constraintStart_toStartOf="@+id/gdlLeftForm"
+        app:layout_constraintTop_toBottomOf="@+id/llyServicesContainerForm"
+        app:strokeColor="#E3D9D9"
+        app:strokeWidth="2px" />
+
+    <Button
+        android:id="@+id/btnBackForm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:backgroundTint="#2C2F30"
+        android:fontFamily="@font/comfortaa"
+        android:text="@string/strBackGlobal"
+        android:textColor="#E3D9D9"
+        app:layout_constraintEnd_toStartOf="@+id/gdlRightForm"
+        app:layout_constraintTop_toBottomOf="@+id/btnResolveForm"
+        app:strokeColor="#E3D9D9"
+        app:strokeWidth="2px" />
+</androidx.constraintlayout.widget.ConstraintLayout>

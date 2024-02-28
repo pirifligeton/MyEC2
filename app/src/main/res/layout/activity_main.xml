@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#272424"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gdlLeftMain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="40dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gdlRightMain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="40dp" />
+
+    <ImageView
+        android:id="@+id/imvGlobeMain"
+        android:layout_width="134dp"
+        android:layout_height="134dp"
+        android:layout_marginTop="32dp"
+        app:tint="#E3D9D9"
+        app:layout_constraintEnd_toStartOf="@+id/gdlRightMain"
+        app:layout_constraintStart_toStartOf="@+id/gdlLeftMain"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/baseline_language_24" />
+
+    <Button
+        android:id="@+id/btnRegistryMain"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="32dp"
+        android:backgroundTint="#2C2F30"
+        android:fontFamily="@font/comfortaa"
+        android:text="@string/strRegistryMain"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toStartOf="@+id/gdlRightMain"
+        app:layout_constraintStart_toStartOf="@+id/gdlLeftMain"
+        app:layout_constraintTop_toBottomOf="@+id/imvGlobeMain"
+        app:strokeColor="#E3D9D9"
+        app:strokeWidth="2px" />
+
+    <Button
+        android:id="@+id/btnFormMain"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="32dp"
+        android:backgroundTint="#2C2F30"
+        android:fontFamily="@font/comfortaa"
+        android:text="@string/strFormMain"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toStartOf="@+id/gdlRightMain"
+        app:layout_constraintStart_toStartOf="@+id/gdlLeftMain"
+        app:layout_constraintTop_toBottomOf="@+id/btnRegistryMain"
+        app:strokeColor="#E3D9D9"
+        app:strokeWidth="2px" />
+
+    <Button
+        android:id="@+id/btnListMain"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="32dp"
+        android:backgroundTint="#2C2F30"
+        android:fontFamily="@font/comfortaa"
+        android:text="@string/strListMain"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toStartOf="@+id/gdlRightMain"
+        app:layout_constraintStart_toStartOf="@+id/gdlLeftMain"
+        app:layout_constraintTop_toBottomOf="@+id/btnFormMain"
+        app:strokeColor="#E3D9D9"
+        app:strokeWidth="2px" />
+</androidx.constraintlayout.widget.ConstraintLayout>
